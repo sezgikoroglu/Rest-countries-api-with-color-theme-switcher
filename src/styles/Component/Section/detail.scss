@@ -1,0 +1,118 @@
+@use "../../Base/vars.scss" as v;
+
+
+.country {
+  padding: 50px 60px;
+  height: 100vh;
+  transition: background-color ease-in-out 1s;
+  
+  .country-button {
+    position: relative;
+    width: 95px;
+    height: 28px;
+    text-align: center;
+    background-color: v.$light-mode-bg;
+    color: v.$light-mode-text;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 13px;
+    font-weight: v.$font-weight-normal;
+    border: none;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: background-color ease-in-out 1s;
+    cursor: pointer;
+    
+    & span {
+      margin-left: 8px;
+    }
+
+    &--dark{
+      background-color: v.$dark-mode-elements;
+      color: v.$dark-mode-text;
+    }
+  }
+
+  &_section {
+    display: flex;
+    flex-direction: row;
+    margin-top: 70px;
+    height: 350px;
+    
+  }
+  &-flag {
+    width: 40%;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      
+    }
+   
+  }
+  &-details {
+    width: 50%;
+    padding: 40px 20px 0 90px;
+   
+    &-title {
+      font-size: 25px;
+      font-weight: v.$font-weight-extra-bold;
+    }
+    &-elements {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 25px 0 65px;
+      line-height: 25px;
+      
+      & p {
+        font-size: v.$font-size-text;
+        font-weight: v.$font-weight-normal;
+      }
+      & span {
+        font-weight: v.$font-weight-bold;
+      }
+    }
+    &-list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      flex-wrap: wrap;
+     
+      & p {
+        font-size: v.$font-size-text;
+        font-weight: v.$font-weight-normal;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        
+      }
+      & span {
+        font-weight: v.$font-weight-bold;
+      }
+    }
+    &--button {
+      width: auto;
+      height: 25px;
+      padding: 5px 25px;
+      margin-right: 7px;
+      margin-bottom: 10px;
+      background-color: v.$light-mode-bg;
+      color: v.$light-mode-text;
+      font-family: "Nunito Sans", sans-serif;
+      font-size: 12px;
+      font-weight: v.$font-weight-normal;
+      border: none;
+      border-radius: 4px;
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      transition: background-color ease-in-out 1s;
+      &--dark {
+        background-color: v.$dark-mode-elements;
+        color: v.$dark-mode-text;
+      }
+    }
+  }
+
+  &--dark{
+    background-color: v.$dark-mode-bg;
+    color: v.$dark-mode-text;
+  }
+}

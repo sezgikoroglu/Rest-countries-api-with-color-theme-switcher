@@ -1,0 +1,43 @@
+@use "../../Base/vars.scss" as v;
+
+.header{
+    
+    padding: 20px 60px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    background-color: v.$light-mode-elements;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: background-color ease-in-out 1s;
+
+    .header-title{
+        font-size: v.$font-size-title;
+        font-weight: v.$font-weight-extra-bold;
+    }
+
+    .header-mode{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        .btn{
+            font-size: v.$font-size-text;
+            font-weight: v.$font-weight-normal;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            transition: ease-in-out 0.5s;
+
+            &:hover{
+                opacity: 0.7;
+            }
+
+            &--dark {
+                color: v.$dark-mode-text;
+              };
+        }
+    }
+    &--dark {
+        background-color: v.$dark-mode-elements;
+        color: v.$dark-mode-text
+      };
+}
